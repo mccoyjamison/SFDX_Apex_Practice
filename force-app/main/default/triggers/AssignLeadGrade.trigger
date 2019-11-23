@@ -1,4 +1,4 @@
-trigger AssignLeadGrade on SOBJECT (before insert) {
+trigger AssignLeadGrade on Lead (before insert) {
   for (Lead myLead : Trigger.new) {
         if (myLead.Score__c != null) {
             if (myLead.Score__c == 100) {
